@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* Diretórios */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Ambiente */
+    "target": "ES2020",                 // Código JS de saída compatível
+    "module": "CommonJS",               // Melhor para rodar direto no Node sem complicação
+    "lib": ["esnext"],
+    "types": ["node"],                  // Tipos do Node.js
+
+    /* Suporte a Decorators (necessário para TypeORM) */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    /* Outros */
+    "esModuleInterop": true,            // Permite importar libs padrão (ex: import express from "express")
+    "strict": true,                     // Tipagem estrita
+    "skipLibCheck": true,               // Evita erros de libs de terceiros
+    "sourceMap": true,                  // Mapas para debug
+    "declaration": false                // Não precisa de arquivos .d.ts no backend
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
